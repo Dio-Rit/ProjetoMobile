@@ -1,4 +1,4 @@
-package com.example.projetomobile;
+package com.example.projetomobile.Activity;
 
 import android.os.Bundle;
 
@@ -8,10 +8,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class BaseActivity extends AppCompatActivity {
+import com.google.firebase.Firebase;
+import com.google.firebase.database.FirebaseDatabase;
 
+public class BaseActivity extends AppCompatActivity {
+    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        database=FirebaseDatabase.getInstance();
     }
 }
